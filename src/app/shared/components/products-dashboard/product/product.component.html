@@ -1,1 +1,18 @@
- {{producd | json }}
+ <div class="row">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header">
+                {{producd.pname}}
+            </div>
+            <div class="card-body">
+                {{producd.pid}}
+            </div>
+            <div class="card-footer">
+                <button 
+                routerLink="edit"
+                class="btn btn-sm btn-info mr-3">Edit</button>
+                <button class="btn btn-sm btn-warning">Update</button>
+            </div>
+        </div>
+    </div>
+ </div>
