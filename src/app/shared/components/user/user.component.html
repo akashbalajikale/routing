@@ -1,6 +1,6 @@
 <p>user works!</p>
- <section><header class="bg-warning text-center p-1 text-capitalize mb-4"><strong><h1>Tab by usnig *ngSwitchTab</h1></strong></header>
-</section>
+<header class="bg-warning text-center p-1 text-capitalize mb-4"><strong><h1>Tab by usnig *ngSwitchTab</h1></strong></header>
+
 <ul class="nav nav-pills">
     <li 
     *ngFor="let array of skillsbox"
@@ -38,6 +38,21 @@
         </div>
     </div>
  </div>  
+
+ <ul class="nav nav-pills">
+    <li 
+    *ngFor="let array of skillsbox"
+    (click)="onClick(array)"
+    class="nav-items">
+
+    <a 
+    [ngClass]="{
+        active : defaultskill.toLowerCase().includes(array.skillname)
+    }"
+    href="javascript:;" class="nav-link">
+        {{array.skillname}}
+    </a></li>
+ </ul>
 
 
 
