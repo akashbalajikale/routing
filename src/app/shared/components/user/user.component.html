@@ -39,21 +39,7 @@
     </div>
  </div>  
 
- <ul class="nav nav-pills">
-    <li 
-    *ngFor="let array of skillsbox"
-    (click)="onClick(array)"
-    class="nav-items">
-
-    <a 
-    [ngClass]="{
-        active : defaultskill.toLowerCase().includes(array.skillname)
-    }"
-    href="javascript:;" class="nav-link">
-        {{array.skillname}}
-    </a></li>
- </ul>
-
+ 
 
 
  <div class="tab-body" [ngSwitch]="defaultskill">
