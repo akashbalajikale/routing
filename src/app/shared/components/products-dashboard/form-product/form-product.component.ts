@@ -7,9 +7,7 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./form-product.component.scss']
 })
 export class FormProductComponent implements OnInit {
-OnStdAdd() {
-throw new Error('Method not implemented.');
-}  
+ 
 
   constructor(
     
