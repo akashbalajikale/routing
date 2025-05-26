@@ -8,7 +8,14 @@ import { NgForm } from '@angular/forms';
 })
 export class FormProductComponent implements OnInit {
  
-  @ViewChild("stdform") stdform !: NgForm;
+ cricketers = [
+    { name: 'Virat Kohli', country: 'India', runs: 12000 },
+    { name: 'Joe Root', country: 'England', runs: 10000 },
+    { name: 'Babar Azam', country: 'Pakistan', runs: 8000 },
+    { name: 'Kane Williamson', country: 'New Zealand', runs: 9500 },
+    { name: 'Steve Smith', country: 'Australia', runs: 9200 }
+  ];
+  stdform: any;
 
   constructor(
     
@@ -18,19 +25,7 @@ export class FormProductComponent implements OnInit {
   }
 
   OnStdAdd(){
-    if(this.stdform.valid){
-      let stdObj : any = this.stdform.value;
-       
      
-      
-      stdObj.isActive = this.stdform.value.isActive === "Yes" ? true : false;
-      console.log(stdObj);
-      
-      this.stdform.reset()
-    
-       
-      
-    }
   }
 
 

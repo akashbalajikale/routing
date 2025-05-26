@@ -117,3 +117,28 @@
         </div>
     </div>
  </div>
+
+
+
+ <div class="row">
+    <div class="col-md-6">
+        <h2>Cricketer Stats</h2>
+<table border="1">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Country</th>
+      <th>Runs</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let cricketer of cricketers">
+      <td>{{ cricketer.name }}</td>
+      <td>{{ cricketer.country }}</td>
+      <td>{{ cricketer.runs }}</td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+ </div>
