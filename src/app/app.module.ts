@@ -9,7 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { ProductsDashboardComponent } from './shared/components/products-dashboard/products-dashboard.component';
 import { ProductComponent } from './shared/components/products-dashboard/product/product.component';
 import { FormProductComponent } from './shared/components/products-dashboard/form-product/form-product.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,7 +25,8 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

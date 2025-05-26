@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-form-product',
@@ -7,9 +8,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormProductComponent implements OnInit {
  
-  constructor() { }
+  @ViewChild("stdform") stdform !: NgForm;
+
+  constructor(
+    
+  ) { }
 
   ngOnInit(): void {
   }
+
+  OnStdAdd(){
+    if(this.stdform.valid){
+      let stdObj : any = this.stdform.value;
+       
+     
+      
+      stdObj.isActive = this.stdform.value.isActive === "Yes" ? true : false;
+      console.log(stdObj);
+      
+      this.stdform.reset()
+    
+       
+      
+    }
+  }
+
 
 }
